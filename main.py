@@ -4,10 +4,15 @@ def caeserCypher(string,key):
   stringArray = [x for x in string]
   shiftedString = ""
   for i in range(len(stringArray)):
-    letter = stringArray[i]
-    shiftedString += chr(ord(letter) + key)
+    j = string[i]
+    if ord(j) + key > 96 and ord(j) + key < 123:
+      shiftedString += chr(ord(j) + key)
+    elif ord(j) + key > 122:
+      shiftedString += chr(ord(j) + key - 26)
+    elif ord(j) + key < 96:
+      shiftedString += chr(ord(j) + key + 26)
   return shiftedString
-print(caeserCypher("hello", 3))
+print(caeserCypher("cryptography", -15))
 
 #i needed another commit to get 100% lol
   
