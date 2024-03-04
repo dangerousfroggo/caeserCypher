@@ -9,7 +9,7 @@ def caeserCypher(string,key):
       shiftedString += chr(ord(j) + key)
     elif ord(j) + key > 122:
       shiftedString += chr(ord(j) + key - 26)
-    elif ord(j) + key < 96:
+    elif ord(j) + key < 97:
       shiftedString += chr(ord(j) + key + 26)
   return shiftedString
 print(caeserCypher("cryptography", -15))
