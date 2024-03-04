@@ -1,5 +1,9 @@
 #created by Sergei Borishchev, 349512905
 
+''' caeser shifts a given string and returns result
+    @param string: string to be shifted, key is the number to shift by
+    @return: shifted string
+'''
 def caeserCypher(string,key):
   stringArray = [x for x in string]
   shiftedString = ""
